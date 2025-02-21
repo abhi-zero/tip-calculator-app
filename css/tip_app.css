@@ -1,0 +1,73 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://fonts-3by.pages.dev/space-mono-v15-latin/space-mono-v15-latin-700.woff2') format('woff2');
+}
+:root{
+    /*COLORS*/
+  /* Primary */
+  --primary-button-bg: hsl(172, 67%, 45%);
+
+  /* Neutral */
+  --bg-tip-primary: hsl(183, 100%, 15%);
+  --text-secondary: hsl(186, 14%, 43%);
+  --text-placeholder: hsl(184, 14%, 56%);
+  --background-light: hsl(185, 41%, 84%);
+  --background-lighter: hsl(189, 41%, 97%);
+  --background-white: hsl(0, 0%, 100%);
+
+  /*Fonts*/
+  --font-family: 'Space Mono', monospace;
+}
+
+  /* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--font-family);
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+
+.app-container .title{
+    
+    color: var(--text-secondary);
+    font-size: 2rem;
+    text-align: center;
+}
