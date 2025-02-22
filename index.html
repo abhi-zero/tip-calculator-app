@@ -13,22 +13,30 @@
     <title>Frontend Mentor | Tip calculator app</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
   </head>
   <body>
     <div class="app-container">
       <header>
-       <h1 class="title">Splitter</h1>
+        <h1 class="title">Splitter</h1>
       </header>
       <main>
         <div class="user-input">
-          <h2 class="heading">
-            Bill
-          </h2>
-  
+          <div class="bill-section">
+            <div class="heading-error">
+              <h3 class="section-heading">
+                Bill
+              </h3>
+              <h3 class="section-heading error-text">
+                Can't be zero
+              </h3>
+            </div>
+            <div class="input-section">
+              <img src="./images/icon-dollar.svg" alt="Sign of dollor">
+              <input type="text" name id class="bill-input input">
+            </div>
+          </div>
+
           <div class="tip-section">
             <h3 class="section-heading">Select Tip %</h3>
             <div class="cta-section">
@@ -37,30 +45,39 @@
               <button class="cta">15%</button>
               <button class="cta">25%</button>
               <button class="cta">50%</button>
-              <input type="text" name id class="custom-tip" placeholder="Custom">
+              <input type="text" name id class="custom-tip"
+                placeholder="Custom">
             </div>
           </div>
-  
-         <div class="people-section">
-          <h3 class="section-heading">
-            Number of People
-          </h3>
-          <input type="text" name id class="people-input">
-         </div>
+
+          <div class="people-section">
+            <div class="heading-error">
+              <h3 class="section-heading">
+                Number of People
+              </h3>
+              <h3 class="section-heading error-text">
+                Can't be zero
+              </h3>
+            </div>
+            <div class="input-section">
+              <img src="./images/icon-person.svg" alt="Sign of person">
+              <input type="text" name id class="people-input input">
+            </div>
+          </div>
         </div>
-        
+
         <div class="display-amount">
           <div class="tip-amount-section">
-           <h3 class="section-heading">Tip Amount</h3>
-           <p>/ person</p>
-           <p class="tip-amount">$4.27</p>
+            <h3 class="section-heading">Tip Amount</h3>
+            <p>/ person</p>
+            <p class="tip-amount">$4.27</p>
           </div>
           <div class="total-amount-section">
-           <h3 class="section-heading">Total</h3>
-           <p>/ person</p>
-           <p class="total-amount">$45.27</p>
+            <h3 class="section-heading">Total</h3>
+            <p>/ person</p>
+            <p class="total-amount">$45.27</p>
           </div>
-        <button class="reset-cta">Reset</button>
+          <button class="reset-cta">Reset</button>
         </div>
       </main>
       <footer>
