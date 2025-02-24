@@ -33,19 +33,19 @@
             </div>
             <div class="input-section">
               <img src="./images/icon-dollar.svg" alt="Sign of dollor">
-              <input type="text" name id class="bill-input input" minlength="1" required>
+              <input type="text" name id="billValue" class="bill-input input" minlength="1" required>
             </div>
           </div>
 
           <div class="tip-section">
             <h3 class="section-heading">Select Tip %</h3>
             <div class="cta-section">
-              <button class="cta selected">5%</button>
-              <button class="cta">10%</button>
-              <button class="cta">15%</button>
-              <button class="cta">25%</button>
-              <button class="cta">50%</button>
-              <input type="text" name id class="custom-tip-input input"
+              <button class="cta selected" data-value="5">5%</button>
+              <button class="cta" data-value="10">10%</button>
+              <button class="cta" data-value="15">15%</button>
+              <button class="cta" data-value="25">25%</button>
+              <button class="cta" data-value="50">50%</button>
+              <input type="text" name id="tipValue" class="custom-tip-input input"
                 placeholder="Custom">
             </div>
           </div>
@@ -61,7 +61,7 @@
             </div>
             <div class="input-section">
               <img src="./images/icon-person.svg" alt="Sign of person">
-              <input type="text" name id class="people-input input" minlength="1" required>
+              <input type="text" name id="peopleValue" class="people-input input" minlength="1" required>
             </div>
           </div>
         </div>
@@ -94,6 +94,8 @@
       </footer>
       
     </div>
+
+    <script src="./js/tip_app.js"></script>
   </body>
 </html>
 
