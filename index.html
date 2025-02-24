@@ -27,20 +27,20 @@
               <h3 class="section-heading">
                 Bill
               </h3>
-              <h3 class="section-heading error-text">
+              <h3 class="section-heading error-text hide">
                 Can't be zero
               </h3>
             </div>
             <div class="input-section">
               <img src="./images/icon-dollar.svg" alt="Sign of dollor">
-              <input type="text" name id class="bill-input input">
+              <input type="text" name id class="bill-input input" minlength="1" required>
             </div>
           </div>
 
           <div class="tip-section">
             <h3 class="section-heading">Select Tip %</h3>
             <div class="cta-section">
-              <button class="cta">5%</button>
+              <button class="cta selected">5%</button>
               <button class="cta">10%</button>
               <button class="cta">15%</button>
               <button class="cta">25%</button>
@@ -55,13 +55,13 @@
               <h3 class="section-heading">
                 Number of People
               </h3>
-              <h3 class="section-heading error-text">
+              <h3 class="section-heading error-text hide">
                 Can't be zero
               </h3>
             </div>
             <div class="input-section">
               <img src="./images/icon-person.svg" alt="Sign of person">
-              <input type="text" name id class="people-input input">
+              <input type="text" name id class="people-input input" minlength="1" required>
             </div>
           </div>
         </div>
@@ -84,21 +84,16 @@
           <button class="reset-button">Reset</button>
         </div>
       </main>
-      <footer>
-        JAFkASFKJSAB
+      <footer class="app-footer">
+        <p class="footer-text">
+          &copy; 2025 Tip Calculator App. All rights reserved.
+        </p>
+        <p class="footer-note">
+          Designed to simplify your tipping experience.
+        </p>
       </footer>
+      
     </div>
   </body>
 </html>
 
-<!-- .app-container{
-  height: 100vh;
-  display: grid;
-  grid-template-rows: auto  100px;
-}
-
-main{
-  height: 90vh;
-  justify-self: center;
-  align-content: center;
-} -->
