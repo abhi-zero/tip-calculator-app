@@ -1,15 +1,16 @@
 @font-face {
-    font-display: swap;
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    src: url('https://fonts-3by.pages.dev/space-mono-v15-latin/space-mono-v15-latin-700.woff2') format('woff2');
+  font-display: swap;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://fonts-3by.pages.dev/space-mono-v15-latin/space-mono-v15-latin-700.woff2")
+    format("woff2");
 }
-:root{
-    /*COLORS*/
+:root {
+  /*COLORS*/
   /* Primary */
   --primary-button-bg: hsl(172, 67%, 45%);
-  --primary-hover-color : hsl(172, 57%, 74%);
+  --primary-hover-color: hsl(172, 57%, 74%);
 
   /* Neutral */
   --bg-tip-primary: hsl(183, 100%, 15%);
@@ -20,107 +21,142 @@
   --background-white: hsl(0, 0%, 100%);
 
   /*Fonts*/
-  --font-family: 'Space Mono', monospace;
+  --font-family: "Space Mono", monospace;
 }
 
-  /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  /* 2. Remove default margin */
-  * {
-    margin: 0;
-  }
-  
-  body {
-    /* 3. Add accessible line-height */
-    line-height: 1.5;
-    /* 4. Improve text rendering */
-    -webkit-font-smoothing: antialiased;
-    font-family: var(--font-family);
-  }
-  
-  /* 5. Improve media defaults */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  
-  /* 6. Inherit fonts for form controls */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  
-  /* 7. Avoid text overflows */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  
-  /* 8. Improve line wrapping */
-  p {
-    text-wrap: pretty;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance;
-  }
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  .section-heading{
-    font-size: clamp(0.875rem, 0.475rem + 0.82vb, 1rem);
-    color: var(--text-placeholder);
-  }
-  
-  .input{
-    width: 100%;
-    background-color: var(--background-lighter);
-    border: none;
-    font-size: 1rem;
-    margin-block: 10px;
-    padding-block: 10px;
-    padding-left: 30px;
-    padding-right: 20px;
-    text-align: right;
-    border-radius: 6px;
-    color: hsl(183, 100%, 15%);
-  }
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
 
-  .input:focus{
-    outline-color: hsl(172, 67%, 45%);
-  }
-
-  .error-text{
-    color: hsl(0, 100%, 73%);
-  }
-.app-container{
-  min-width: 200px;
-  height: 100vh;
-  display: grid;
-  grid-template-rows:  auto 1fr;
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-family);
   background-color: var(--background-light);
 }
 
-.app-container header{
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.cta.selected{
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+.section-heading {
+  font-size: clamp(0.875rem, 0.475rem + 0.82vb, 1rem);
+  color: var(--text-placeholder);
+}
+
+.input {
+  width: 100%;
+  background-color: var(--background-lighter);
+  border: none;
+  font-size: 1rem;
+  margin-block: 10px;
+  padding-block: 10px;
+  padding-left: 30px;
+  padding-right: 20px;
+  text-align: right;
+  border-radius: 6px;
+  color: hsl(183, 100%, 15%);
+}
+
+.input:focus {
+  outline-color: hsl(172, 67%, 45%);
+}
+
+.error-text {
+  color: hsl(0, 100%, 73%);
+}
+.app-container {
+  min-width: 200px;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.app-container header {
   width: 90px;
   justify-self: center;
 }
-.app-container .title{
-    color: hsl(183, 100%, 15%);
-    font-size: 1.5rem;
-    text-align: center;
-    letter-spacing: 6px;
-    text-transform: uppercase;
-    margin-block: 30px;
+.app-container .title {
+  color: hsl(183, 100%, 15%);
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-block: 30px;
 }
 
-main{
+main {
   padding: clamp(1.25rem, 0.233rem + 4.651vi, 2.5rem);
   border-radius: 25px 25px 0 0;
   background-color: var(--background-white);
+  display: grid;
+  grid-template-rows: repeat(2, auto);
 }
-.input-section{
+.input-section {
   position: relative;
 }
-.input-section img{
+.input-section img {
   height: 20px;
   width: 15px;
   position: absolute;
@@ -128,37 +164,37 @@ main{
   left: 3%;
 }
 
-.heading-error{
+.heading-error {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.cta-section{
+.cta-section {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   margin-block: clamp(1.25rem, -0.748rem + 4.098vb, 1.875rem);
 }
 
-.cta{
+.cta {
   height: 45px;
   border-radius: 6px;
   background-color: hsl(183, 100%, 15%);
   border: none;
-  color:  hsl(189, 41%, 97%);
+  color: hsl(189, 41%, 97%);
   font-size: 1.25rem;
   font-weight: 700;
   cursor: pointer;
-  transition: all .35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 
-.cta:hover{
+.cta:hover {
   background-color: var(--primary-hover-color);
   color: hsl(183, 100%, 15%);
 }
 
-.custom-tip-input{
+.custom-tip-input {
   height: 40px;
   margin-block: 0px;
   padding: 10px;
@@ -166,44 +202,45 @@ main{
   font-weight: 700;
 }
 
-.summary-container{
+.summary-container {
   display: grid;
   gap: 30px;
   margin-block: 20px;
   grid-template-rows: repeat(3, 1fr);
   padding-block: clamp(1.875rem, -4.119rem + 12.295vb, 3.75rem);
   padding-inline: clamp(1.25rem, 0.741rem + 2.326vi, 1.875rem);
-  background-color:  hsl(183, 100%, 15%);
+  background-color: hsl(183, 100%, 15%);
   border-radius: 15px;
 }
 
-.summary{
+.summary {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.summary .summary-header{
+.summary .summary-header {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
 }
 
-.summary .summary-header .summary-title{
+.summary .summary-header .summary-title {
   font-size: 1.25rem;
   font-weight: 700;
   color: white;
 }
-.summary .summary-header .per-person-label{
+.summary .summary-header .per-person-label {
   font-size: 1rem;
   font-weight: 700;
   color: hsl(186, 14%, 43%);
 }
-.summary .summary-value{
+.summary .summary-value {
   font-size: 2rem;
   font-weight: 700;
   color: hsl(172, 67%, 45%);
 }
 
-.reset-button{
+.reset-button {
+  height: 60px;
   border-radius: 6px;
   border: none;
   background-color: hsl(172, 67%, 45%);
@@ -211,13 +248,65 @@ main{
   font-weight: 700;
   color: hsl(183, 100%, 15%);
   cursor: pointer;
-  transition: all .35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 
-.reset-button:hover{
+.reset-button:hover {
   background-color: var(--primary-hover-color);
 }
 
-footer{
+footer {
   display: none;
+}
+
+footer{
+  justify-self: center;
+  align-self: center;
+}
+
+footer p{
+  color: hsl(183, 100%, 15%);
+  text-align: center;
+}
+
+footer .footer-text{
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+footer .footer-note{
+  font-size: 0.825rem;
+  font-weight: 400;
+}
+
+@media (min-width: 800px) {
+  .app-container {
+    height: 100%;
+    display: grid;
+    gap: 30px;
+    grid-template-rows: 200px auto 100px;
+  }
+
+  header {
+    align-self: end;
+  }
+
+  main {
+    height: 100%;
+    width: 800px;
+    justify-self: center;
+    align-content: center;
+    border-radius: 25px;
+    gap: 20px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .summary-container {
+    margin-block: 0;
+  }
+
+  footer {
+    display: block;
+  }
 }
