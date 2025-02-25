@@ -14,8 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 const selectedValue = clickedButton.dataset.value;
                 tip = selectedValue;
                 console.log(tip);
-            //    callBack(tip)
-                // You can't "return" from the event listener, but you can handle the value here
               }
               return tip;
           });
@@ -29,7 +27,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // function calculateTip(billAmount, tipValue, NoOfPeple){
 
-  // }
 });
