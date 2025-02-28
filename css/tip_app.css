@@ -96,7 +96,7 @@ h6 {
 }
 
 .cta.selected{
-  background-color: hsl(172, 67%, 45%);
+  background-color: hsl(172, 27%, 50%);
   color: hsl(183, 100%, 15%);
 }
 
@@ -293,7 +293,7 @@ footer .footer-note{
 
   main {
     height: 100%;
-    width: 800px;
+    width: 870px;
     justify-self: center;
     align-content: center;
     border-radius: 25px;
