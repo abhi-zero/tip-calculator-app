@@ -22,6 +22,9 @@
 
   /*Fonts*/
   --font-family: "Space Mono", monospace;
+
+  /*Font sizes*/
+  
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -134,7 +137,7 @@ h6 {
 }
 
 .app-container header {
-  width: 90px;
+  width: 5.625rem;
   justify-self: center;
 }
 .app-container .title {
@@ -157,8 +160,8 @@ main {
   position: relative;
 }
 .input-section img {
-  height: 20px;
-  width: 15px;
+  height: 1.25rem;
+  width: 0.9375rem;
   position: absolute;
   top: 33%;
   left: 3%;
@@ -173,12 +176,12 @@ main {
 .cta-section {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(6.25rem, 1fr));
   margin-block: clamp(1.25rem, -0.748rem + 4.098vb, 1.875rem);
 }
 
 .cta {
-  height: 45px;
+  height: 2.8125rem;
   border-radius: 6px;
   background-color: hsl(183, 100%, 15%);
   border: none;
@@ -195,7 +198,7 @@ main {
 }
 
 .custom-tip-input {
-  height: 40px;
+  height: 2.5rem;
   margin-block: 0px;
   padding: 10px;
   font-size: 1.25rem;
@@ -240,7 +243,7 @@ main {
 }
 
 .reset-button {
-  height: 60px;
+  height: 3.75rem;
   border-radius: 6px;
   border: none;
   background-color: hsl(172, 67%, 45%);
@@ -284,7 +287,7 @@ footer .footer-note{
     height: 100%;
     display: grid;
     gap: 30px;
-    grid-template-rows: 200px auto 100px;
+    grid-template-rows: 12.5rem auto 6.25rem;
   }
 
   header {
@@ -293,7 +296,7 @@ footer .footer-note{
 
   main {
     height: 100%;
-    width: 870px;
+    width: 55rem;
     justify-self: center;
     align-content: center;
     border-radius: 25px;
