@@ -10,25 +10,30 @@
   /*COLORS*/
   /* Primary */
   --primary-button-bg: hsl(172, 67%, 45%);
-  --primary-hover-color: hsl(172, 57%, 74%);
+  --primary-button-hover-bg: hsl(172, 57%, 74%);
 
   /* Neutral */
-  --bg-tip-primary: hsl(183, 100%, 15%);
-  --text-secondary: hsl(186, 14%, 43%);
-  --text-placeholder: hsl(184, 14%, 56%);
-  --background-light: hsl(185, 41%, 84%);
-  --background-lighter: hsl(189, 41%, 97%);
-  --background-white: hsl(0, 0%, 100%);
+  --primary-text-color: hsl(183, 100%, 15%);
+  --secondary-text-color: hsl(186, 14%, 43%);
+  --placeholder-text-color: hsl(184, 14%, 56%);
+  --light-background: hsl(185, 41%, 84%);
+  --lighter-background: hsl(189, 41%, 97%);
+  --white-background: hsl(0, 0%, 100%);
+  --error-text-color: hsl(0, 100%, 73%);
+  --cta-text-color: hsl(189, 41%, 97%);
+  --cta-hover-text-color: hsl(183, 100%, 15%);
+  --summary-value-color: hsl(172, 67%, 45%);
+  --summary-title-color: white;
 
   /*Fonts*/
   --font-family: "Space Mono", monospace;
 
   /*Font sizes*/
-  --font-size-base: 1rem;
-  --font-size-large: 1.5rem;
-  --font-size-medium: 1.25rem;
-  --font-size-xlarge: 2rem;
-  --font-size-small: 0.825rem;
+  --font-size-100: 0.825rem;
+  --font-size-200: 1rem;
+  --font-size-300: 1.25rem;
+  --font-size-400: 1.5rem;
+  --font-size-500: 2rem;
 }  
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -49,7 +54,7 @@ body {
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   font-family: var(--font-family);
-  background-color: var(--background-light);
+  background-color: var(--light-background);
 }
 
 /* 5. Improve media defaults */
@@ -104,34 +109,34 @@ h6 {
 
 .cta.selected{
   background-color: hsl(172, 27%, 50%);
-  color: hsl(183, 100%, 15%);
+  color: var(--primary-text-color);
 }
 
 .section-heading {
-  font-size: clamp(0.875rem, 0.475rem + 0.82vb, 1rem);
-  color: var(--text-placeholder);
+  font-size: clamp(0.875rem, 0.475rem + 0.82vb, var(--font-size-200));
+  color: var(--placeholder-text-color);
 }
 
 .input {
   width: 100%;
-  background-color: var(--background-lighter);
+  background-color: var(--lighter-background);
   border: none;
-  font-size: 1rem;
+  font-size: var(--font-size-200);
   margin-block: 10px;
   padding-block: 10px;
   padding-left: 30px;
   padding-right: 20px;
   text-align: right;
   border-radius: 6px;
-  color: hsl(183, 100%, 15%);
+  color: var(--primary-text-color);
 }
 
 .input:focus {
-  outline-color: hsl(172, 67%, 45%);
+  outline-color: var(--primary-button-bg);
 }
 
 .error-text {
-  color: hsl(0, 100%, 73%);
+  color: var(--error-text-color);
 }
 .app-container {
   min-width: 200px;
@@ -145,8 +150,8 @@ h6 {
   justify-self: center;
 }
 .app-container .title {
-  color: hsl(183, 100%, 15%);
-  font-size: 1.5rem;
+  color: var(--primary-text-color);
+  font-size: var(--font-size-400);
   text-align: center;
   letter-spacing: 6px;
   text-transform: uppercase;
@@ -156,7 +161,7 @@ h6 {
 main {
   padding: clamp(1.25rem, 0.233rem + 4.651vi, 2.5rem);
   border-radius: 25px 25px 0 0;
-  background-color: var(--background-white);
+  background-color: var(--white-background);
   display: grid;
   grid-template-rows: repeat(2, auto);
 }
@@ -187,25 +192,25 @@ main {
 .cta {
   height: 2.8125rem;
   border-radius: 6px;
-  background-color: hsl(183, 100%, 15%);
+  background-color: var(--primary-text-color);
   border: none;
-  color: hsl(189, 41%, 97%);
-  font-size: 1.25rem;
+  color: var(--cta-text-color);
+  font-size: var(--font-size-300);
   font-weight: 700;
   cursor: pointer;
   transition: all 0.35s ease-in-out;
 }
 
 .cta:hover {
-  background-color: var(--primary-hover-color);
-  color: hsl(183, 100%, 15%);
+  background-color: var(--primary-button-hover-bg);
+  color: var(--cta-hover-text-color);
 }
 
 .custom-tip-input {
   height: 2.5rem;
   margin-block: 0px;
   padding: 10px;
-  font-size: 1.25rem;
+  font-size: var(--font-size-300);
   font-weight: 700;
 }
 
@@ -216,7 +221,7 @@ main {
   grid-template-rows: repeat(3, 1fr);
   padding-block: clamp(1.875rem, -4.119rem + 12.295vb, 3.75rem);
   padding-inline: clamp(1.25rem, 0.741rem + 2.326vi, 1.875rem);
-  background-color: hsl(183, 100%, 15%);
+  background-color: var(--primary-text-color);
   border-radius: 15px;
 }
 
@@ -231,35 +236,35 @@ main {
 }
 
 .summary .summary-header .summary-title {
-  font-size: 1.25rem;
+  font-size: var(--font-size-300);
   font-weight: 700;
-  color: white;
+  color: var(--summary-title-color);
 }
 .summary .summary-header .per-person-label {
-  font-size: 1rem;
+  font-size: var(--font-size-200);
   font-weight: 700;
-  color: hsl(186, 14%, 43%);
+  color: var(--secondary-text-color);
 }
 .summary .summary-value {
-  font-size: 2rem;
+  font-size: var(--font-size-500);
   font-weight: 700;
-  color: hsl(172, 67%, 45%);
+  color: var(--summary-value-color);
 }
 
 .reset-button {
   height: 3.75rem;
   border-radius: 6px;
   border: none;
-  background-color: hsl(172, 67%, 45%);
-  font-size: 1.5rem;
+  background-color: var(--primary-button-bg);
+  font-size: var(--font-size-400);
   font-weight: 700;
-  color: hsl(183, 100%, 15%);
+  color: var(--primary-text-color);
   cursor: pointer;
   transition: all 0.35s ease-in-out;
 }
 
 .reset-button:hover {
-  background-color: var(--primary-hover-color);
+  background-color: var(--primary-button-hover-bg);
 }
 
 footer {
@@ -272,17 +277,17 @@ footer{
 }
 
 footer p{
-  color: hsl(183, 100%, 15%);
+  color: var(--primary-text-color);
   text-align: center;
 }
 
 footer .footer-text{
-  font-size: 1rem;
+  font-size: var(--font-size-200);
   font-weight: 700;
 }
 
 footer .footer-note{
-  font-size: 0.825rem;
+  font-size: var(--font-size-100);
   font-weight: 400;
 }
 
