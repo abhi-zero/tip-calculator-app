@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bill.value = "";
     tipValue.value = "";
     people.value = "";
-    output(0, 0);
+    output(0.00, 0.00);
     for(let button of tipSection.children){
       button.classList.remove("selected");
     }
