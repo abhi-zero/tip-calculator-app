@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const tipAmount = ((billValue * tipPercent) / 100 / peopleValue).toFixed(
         2
       );
-      console.log(tipAmount);
       return tipAmount;
     }
   }
@@ -56,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
       billValue / peopleValue / 100 +
       parseFloat(tipAmount)
     ).toFixed(2);
-    console.log(totalAmount);
     return totalAmount;
   }
 
@@ -64,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener("input", () => {
       // bill value changes in to cent for better accuracy
       const billValue = parseFloat(bill.value) * 100;
-      console.log(billValue);
       const peopleValue = parseInt(people.value);
       const tip = calculateTip(billValue, peopleValue);
       const totalAmount = calculateTotalAmount(billValue, peopleValue);
@@ -76,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bill.value = "";
     tipValue.value = "";
     people.value = "";
-    output("0", "0");
+    output(0.00.toFixed(2), 0.00.toFixed(2)); 
     for(let button of tipSection.children){
       button.classList.remove("selected");
     }
