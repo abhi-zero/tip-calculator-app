@@ -69,5 +69,5 @@ In future projects, I want to continue focusing on:
 
 ## Author
 
-Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+Frontend Mentor - [@abhi-zero](https://www.frontendmentor.io/profile/abhi-zero)
 
